@@ -11,6 +11,26 @@ The line is small italic text in a muted color, so it reads as information and
 not as part of the conversation. It re-reads the repository each time the band
 redraws, so a branch switch shows up without restarting the session.
 
+## Install
+
+Needs Claude Code with the `claude` command on your PATH. If you have only the
+desktop app, install the command-line tool once; the desktop app does not add
+it by itself.
+
+In a Claude Code session, desktop app or terminal:
+
+```
+/plugin install repo-branch-band --marketplace oily-dodo/claude-mods
+```
+
+Or from a shell:
+
+```bash
+claude plugin install repo-branch-band --marketplace oily-dodo/claude-mods
+```
+
+Start a new session afterwards to see it.
+
 ## When there is no remote
 
 If the folder is a git repository with no remote, the line reads
@@ -33,31 +53,6 @@ It does not send anything. You read it, edit it if you like, and press Enter.
 
 The remote is shortened to `owner/name` from either an SSH or an HTTPS URL.
 
-## Install
-
-Add the marketplace once, then install the mod.
-
-At the prompt of a terminal session (typing `/plugin` in the desktop app opens Settings instead of installing):
-
-```
-/plugin marketplace add oily-dodo/claude-mods
-/plugin install repo-branch-band --marketplace oily-dodo/claude-mods
-```
-
-From a shell (needs the `claude` command on your PATH, which the desktop app does not add by itself):
-
-```bash
-claude plugin install repo-branch-band --marketplace oily-dodo/claude-mods
-```
-
-In the desktop app: click **+** next to the prompt box, then **Plugins**,
-**Add marketplace** with `oily-dodo/claude-mods`, then
-**Add plugin**.
-
-If the mod does not show up in the desktop app's search, use the shell command above.
-
-Start a new session afterwards to see the line.
-
 ## What it touches
 
 It asks the engine which working copy the session is in, and reads the
@@ -68,14 +63,15 @@ requests, runs no commands of its own, writes no files and sends no prompts.
 
 Everything lives in `hooks/register.tsx`:
 
-- The wording is the `Attached repos` label and the template strings that start with `local:`.
-- The text size is `size="footnote"`. The steps are `caption`, `footnote`,
+- **Wording:** the `Attached repos` label and the template strings that start
+  with `local:`.
+- **Text size:** `size="footnote"`. The steps are `caption`, `footnote`,
   `body`, `heading` and `title`.
-- The request the button adds is the `text` passed to `$.prompt.fill`.
+- **Button request:** the `text` passed to `$.prompt.fill`.
 
 The app draws its own frame around any row in the band, and a mod cannot
 remove it.
 
 ## License
 
-MIT. See [LICENSE](LICENSE).
+[MIT](LICENSE)

@@ -14,17 +14,17 @@ read your files, run commands or make network requests.
 At the prompt of a terminal session:
 
 ```
-/plugin install fall-leaves --marketplace svilotti-od/oily-dodo-claude-mods
+/plugin install fall-leaves --marketplace oily-dodo/claude-mods
 ```
 
 From a shell:
 
 ```bash
-claude plugin install fall-leaves --marketplace svilotti-od/oily-dodo-claude-mods
+claude plugin install fall-leaves --marketplace oily-dodo/claude-mods
 ```
 
 In the desktop app: click **+** next to the prompt box, then **Plugins**,
-**Add marketplace** with `svilotti-od/oily-dodo-claude-mods`, then **Add plugin**.
+**Add marketplace** with `oily-dodo/claude-mods`, then **Add plugin**.
 
 Start a new session afterwards to see the leaves.
 

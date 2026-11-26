@@ -1,0 +1,13 @@
+{
+  "name": "fall-leaves",
+  "description": "An autumn look for Claude Code: warm colors and slowly falling leaves",
+  "owner": {
+    "name": "svilotti-od"
+  },
+  "plugins": [
+    {
+      "name": "fall-leaves",
+      "source": "./"
+    }
+  ]
+}

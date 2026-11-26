@@ -28,7 +28,22 @@ In the desktop app: click **+** next to the prompt box, then **Plugins**,
 
 Start a new session afterwards to see the leaves.
 
+## Where the leaves show
+
+A mod's backdrop covers the whole window and cannot target one panel, so the
+leaves fall in the main area along the left edge rather than behind the sidebar
+itself.
+
 ## Tuning
 
-The speed of the fall is the `* 1.25` on the `duration` line in
-`hooks/register.tsx`. Raise it to slow the leaves, lower it to speed them up.
+Everything lives in `hooks/register.tsx`:
+
+- **Speed:** the `* 1.25` on the `duration` line. Raise it to slow the leaves,
+  lower it to speed them up.
+- **Leaf count:** `const count = 22`.
+- **Left-edge concentration:** the `x` formulas in `buildScene`.
+- **Readability:** the `glass` blur and opacity in `LOOK`.
+
+## License
+
+[MIT](LICENSE)

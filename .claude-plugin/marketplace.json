@@ -11,6 +11,11 @@
       "description": "An autumn look for Claude Code: warm colors and slowly falling leaves"
     },
     {
+      "name": "cream-and-brown",
+      "source": "./cream-and-brown",
+      "description": "A warm theme: cream in light mode, dark brown in dark mode"
+    },
+    {
       "name": "repo-branch-band",
       "source": "./repo-branch-band",
       "description": "Shows the local folder, remote repository and branch in a quiet line above the prompt box"

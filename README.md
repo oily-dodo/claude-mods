@@ -13,7 +13,7 @@ also a Claude Code *marketplace*.
 | --- | --- |
 | [`cream-and-brown`](cream-and-brown) | A warm theme: cream in light mode, dark brown in dark mode, with a copper-brown accent. A theme only: it reads no files, runs no commands and makes no network requests. |
 | [`fall-leaves`](fall-leaves) | An autumn theme: a warm parchment palette by day, dark umber by night, and leaves drifting down the left side of the window. A theme only: it reads no files, runs no commands and makes no network requests. |
-| [`repo-branch-band`](repo-branch-band) | A quiet line above the prompt box: `local: <folder> · remote: <owner/name> · <branch>`. With no remote it reads `remote: none`, and **none** is a button that drops a connect-a-remote request into the prompt box for you to send. |
+| [`repo-branch-band`](repo-branch-band) | A quiet line above the prompt box: `ⓘ Attached repos — local: <folder> · remote: <owner/name> · branch: <branch>`. With no remote it reads `remote: none`, and **none** is a button that drops a connect-a-remote request into the prompt box for you to send. |
 
 Each folder has its own README with details and tuning notes.
 

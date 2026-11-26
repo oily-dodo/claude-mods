@@ -1,0 +1,19 @@
+{
+  "name": "oily-dodo-claude-mods",
+  "description": "Claude Code mods by Oily Dodo: themes, bands and small interface tweaks",
+  "owner": {
+    "name": "svilotti-od"
+  },
+  "plugins": [
+    {
+      "name": "fall-leaves",
+      "source": "./fall-leaves",
+      "description": "An autumn look for Claude Code: warm colors and slowly falling leaves"
+    },
+    {
+      "name": "repo-branch-band",
+      "source": "./repo-branch-band",
+      "description": "Shows the attached remote repository and branch in a band above the prompt box"
+    }
+  ]
+}

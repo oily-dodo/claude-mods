@@ -26,9 +26,10 @@ You add this repo as a marketplace once, then install whichever mods you want.
 1. Click **+** next to the prompt box, then **Plugins**.
 2. Choose **Add marketplace** and enter `oily-dodo/claude-mods`.
 3. Choose **Add plugin** and pick a mod.
-4. Start a new session to see it.
+4. If the mod does not show up in the search, use the shell command below.
+5. Start a new session to see it.
 
-**At the prompt of a terminal session**
+**At the prompt of a terminal session** (typing `/plugin` in the desktop app opens Settings instead of installing)
 
 ```
 /plugin marketplace add oily-dodo/claude-mods
@@ -37,7 +38,7 @@ You add this repo as a marketplace once, then install whichever mods you want.
 /plugin install repo-branch-band --marketplace oily-dodo/claude-mods
 ```
 
-**From a shell**
+**From a shell** (needs the `claude` command on your PATH, which the desktop app does not add by itself)
 
 ```bash
 claude plugin install cream-and-brown --marketplace oily-dodo/claude-mods

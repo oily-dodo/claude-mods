@@ -37,14 +37,14 @@ The remote is shortened to `owner/name` from either an SSH or an HTTPS URL.
 
 Add the marketplace once, then install the mod.
 
-At the prompt of a terminal session:
+At the prompt of a terminal session (typing `/plugin` in the desktop app opens Settings instead of installing):
 
 ```
 /plugin marketplace add oily-dodo/claude-mods
 /plugin install repo-branch-band --marketplace oily-dodo/claude-mods
 ```
 
-From a shell:
+From a shell (needs the `claude` command on your PATH, which the desktop app does not add by itself):
 
 ```bash
 claude plugin install repo-branch-band --marketplace oily-dodo/claude-mods
@@ -53,6 +53,8 @@ claude plugin install repo-branch-band --marketplace oily-dodo/claude-mods
 In the desktop app: click **+** next to the prompt box, then **Plugins**,
 **Add marketplace** with `oily-dodo/claude-mods`, then
 **Add plugin**.
+
+If the mod does not show up in the desktop app's search, use the shell command above.
 
 Start a new session afterwards to see the line.
 

@@ -5,7 +5,7 @@ const shortRemote = (remote: string): string => {
   const cleaned = remote.trim().replace(/\.git$/, '').replace(/\/+$/, '')
   const match = cleaned.match(/[:/]([^/:]+\/[^/:]+)$/)
 
-  return match ? match[1] : cleaned
+  return match?.[1] ?? cleaned
 }
 
 export const register: Register = on => {

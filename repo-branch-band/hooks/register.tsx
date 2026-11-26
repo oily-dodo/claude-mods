@@ -26,11 +26,22 @@ export const register: Register = on => {
     const place = branch ?? 'detached'
     const folder = copy?.root.split('/').filter(Boolean).pop() ?? 'unknown'
 
+    // A caption in front, so the row reads as read-only information and not as
+    // a second input box.
+    const label = (
+      <Text bold dimColor size="footnote">
+        {'ⓘ Attached repos — '}
+      </Text>
+    )
+
     if (repo) {
       return (
-        <Text italic dimColor size="footnote">
-          {`local: ${folder} · remote: ${repo} · ${place}`}
-        </Text>
+        <Box>
+          {label}
+          <Text italic dimColor size="footnote">
+            {`local: ${folder} · remote: ${repo} · branch: ${place}`}
+          </Text>
+        </Box>
       )
     }
 
@@ -38,6 +49,7 @@ export const register: Register = on => {
     // (appended, so a draft is kept) for the person to review and send.
     return (
       <Box>
+        {label}
         <Text italic dimColor size="footnote">
           {`local: ${folder} · remote: `}
         </Text>
@@ -55,7 +67,7 @@ export const register: Register = on => {
           </Text>
         </Button>
         <Text italic dimColor size="footnote">
-          {` · ${place}`}
+          {` · branch: ${place}`}
         </Text>
       </Box>
     )

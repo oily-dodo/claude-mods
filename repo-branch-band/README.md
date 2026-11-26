@@ -4,7 +4,7 @@ A Claude Code mod that shows where a session is working: the local folder,
 the remote repository and the branch, in a quiet line above the prompt box.
 
 ```
-local: mods-development · remote: oily-dodo/claude-mods · main
+ⓘ Attached repos — local: mods-development · remote: oily-dodo/claude-mods · branch: main
 ```
 
 The line is small italic text in a muted color, so it reads as information and
@@ -25,8 +25,8 @@ It does not send anything. You read it, edit it if you like, and press Enter.
 
 | Situation | What you see |
 | --- | --- |
-| Git repo with a remote | `local: <folder> · remote: <owner/name> · <branch>` |
-| Git repo with no remote | `local: <folder> · remote: none · <branch>` (`none` is a button) |
+| Git repo with a remote | `ⓘ Attached repos — local: <folder> · remote: <owner/name> · branch: <branch>` |
+| Git repo with no remote | `ⓘ Attached repos — local: <folder> · remote: none · branch: <branch>` (`none` is a button) |
 | Detached HEAD | the branch shows as `detached` |
 | Not in a git repository | no line |
 | A survey is showing | no line, so it never covers a survey |
@@ -68,7 +68,7 @@ requests, runs no commands of its own, writes no files and sends no prompts.
 
 Everything lives in `hooks/register.tsx`:
 
-- The wording is the template strings that start with `local:`.
+- The wording is the `Attached repos` label and the template strings that start with `local:`.
 - The text size is `size="footnote"`. The steps are `caption`, `footnote`,
   `body`, `heading` and `title`.
 - The request the button adds is the `text` passed to `$.prompt.fill`.

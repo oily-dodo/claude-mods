@@ -19,32 +19,28 @@ Each folder has its own README with details and tuning notes.
 
 ## Install
 
-You add this repo as a marketplace once, then install whichever mods you want.
+Needs Claude Code with the `claude` command on your PATH. If you have only the
+desktop app, install the command-line tool once; the desktop app does not add
+it by itself.
 
-**In the desktop app**
-
-1. Click **+** next to the prompt box, then **Plugins**.
-2. Choose **Add marketplace** and enter `oily-dodo/claude-mods`.
-3. Choose **Add plugin** and pick a mod.
-4. If the mod does not show up in the search, use the shell command below.
-5. Start a new session to see it.
-
-**At the prompt of a terminal session** (typing `/plugin` in the desktop app opens Settings instead of installing)
+In a Claude Code session, desktop app or terminal, install whichever mods you
+want. The first install adds this repo as a marketplace for you:
 
 ```
-/plugin marketplace add oily-dodo/claude-mods
 /plugin install cream-and-brown --marketplace oily-dodo/claude-mods
 /plugin install fall-leaves --marketplace oily-dodo/claude-mods
 /plugin install repo-branch-band --marketplace oily-dodo/claude-mods
 ```
 
-**From a shell** (needs the `claude` command on your PATH, which the desktop app does not add by itself)
+Or from a shell:
 
 ```bash
 claude plugin install cream-and-brown --marketplace oily-dodo/claude-mods
 claude plugin install fall-leaves --marketplace oily-dodo/claude-mods
 claude plugin install repo-branch-band --marketplace oily-dodo/claude-mods
 ```
+
+Start a new session afterwards to see it.
 
 An installed mod stays on for every new session until you turn it off. Type
 `/plugin` to see what you have installed and to enable, disable or remove it.
@@ -67,10 +63,14 @@ An installed mod stays on for every new session until you turn it off. Type
 
 ```
 .claude-plugin/marketplace.json   the list of mods this marketplace offers
+MOD-README-TEMPLATE.md            the form every mod README follows
 cream-and-brown/                  one mod: manifest, hooks, README, license
 fall-leaves/                      one mod: manifest, hooks, README, license
 repo-branch-band/                 one mod: manifest, hooks, README, license
 ```
+
+Adding a mod? Follow [`MOD-README-TEMPLATE.md`](MOD-README-TEMPLATE.md) so its
+README reads the same as the others.
 
 Inside a mod, `.claude-plugin/plugin.json` names it and `hooks/register.tsx`
 (`register.ts` in `cream-and-brown`) holds its code.

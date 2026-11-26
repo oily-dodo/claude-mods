@@ -6,34 +6,35 @@ only a few percent of lightness from its neighbour, so a card reads as paper on
 paper by day and wood on wood by night. The accent is a copper brown, while red,
 green and amber keep their usual meaning for danger, success and warning.
 
-It is a theme only. It sets colors once, when a session starts, and it does not
-read your files, run commands or make network requests.
-
 ## Install
 
-At the prompt of a terminal session (typing `/plugin` in the desktop app opens Settings instead of installing):
+Needs Claude Code with the `claude` command on your PATH. If you have only the
+desktop app, install the command-line tool once; the desktop app does not add
+it by itself.
+
+In a Claude Code session, desktop app or terminal:
 
 ```
 /plugin install cream-and-brown --marketplace oily-dodo/claude-mods
 ```
 
-From a shell (needs the `claude` command on your PATH, which the desktop app does not add by itself):
+Or from a shell:
 
 ```bash
 claude plugin install cream-and-brown --marketplace oily-dodo/claude-mods
 ```
 
-In the desktop app: click **+** next to the prompt box, then **Plugins**,
-**Add marketplace** with `oily-dodo/claude-mods`, then **Add plugin**.
-
-If the mod does not show up in the desktop app's search, use the shell command above.
-
-Start a new session afterwards to see the theme.
+Start a new session afterwards to see it.
 
 ## Light and dark
 
 The mod supplies both palettes and the app picks one. Choose light or dark in
 the app's own appearance setting.
+
+## What it touches
+
+It is a theme only. It sets colors once, when a session starts, and it reads no
+files, runs no commands, makes no network requests and sends no prompts.
 
 ## Tuning
 

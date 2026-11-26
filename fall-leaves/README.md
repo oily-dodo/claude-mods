@@ -6,35 +6,36 @@ rust, gold and crimson drifting slowly down the left side of the window. Text
 stays readable because panels are frosted over the scene, and with reduced
 motion on, the leaves rest in place.
 
-It is a theme only. It changes colors and draws a backdrop, and it does not
-read your files, run commands or make network requests.
-
 ## Install
 
-At the prompt of a terminal session (typing `/plugin` in the desktop app opens Settings instead of installing):
+Needs Claude Code with the `claude` command on your PATH. If you have only the
+desktop app, install the command-line tool once; the desktop app does not add
+it by itself.
+
+In a Claude Code session, desktop app or terminal:
 
 ```
 /plugin install fall-leaves --marketplace oily-dodo/claude-mods
 ```
 
-From a shell (needs the `claude` command on your PATH, which the desktop app does not add by itself):
+Or from a shell:
 
 ```bash
 claude plugin install fall-leaves --marketplace oily-dodo/claude-mods
 ```
 
-In the desktop app: click **+** next to the prompt box, then **Plugins**,
-**Add marketplace** with `oily-dodo/claude-mods`, then **Add plugin**.
-
-If the mod does not show up in the desktop app's search, use the shell command above.
-
-Start a new session afterwards to see the leaves.
+Start a new session afterwards to see it.
 
 ## Where the leaves show
 
 A mod's backdrop covers the whole window and cannot target one panel, so the
 leaves fall in the main area along the left edge rather than behind the sidebar
 itself.
+
+## What it touches
+
+It is a theme only. It changes colors and draws a backdrop, and it reads no
+files, runs no commands, makes no network requests and sends no prompts.
 
 ## Tuning
 

@@ -1,44 +1,46 @@
 # repo-branch-band
 
-A Claude Code mod that adds a small, dim, italic line of text just above the
-prompt box so you always know where you are working:
+A Claude Code mod that shows where a session is working: the local folder,
+the remote repository and the branch, in a quiet line above the prompt box.
 
 ```
-local: my-project · remote: svilotti-od/my-project · main
+local: mods-development · remote: svilotti-od/oily-dodo-claude-mods · main
 ```
 
-- **local** is the name of the folder you are working in.
-- **remote** is the GitHub repository the project is attached to, shortened
-  to `owner/name`. Both SSH (`git@github.com:owner/name.git`) and HTTPS
-  (`https://github.com/owner/name.git`) remotes are recognized.
-- The last item is the current **branch**, or `detached` if you are not on one.
+The line is small italic text in a muted color, so it reads as information and
+not as part of the conversation. It re-reads the repository each time the band
+redraws, so a branch switch shows up without restarting the session.
 
 ## When there is no remote
 
-If the project has no remote repository, the line reads `remote: none`, and
-**none** is a button. Clicking it adds this request to the prompt box:
+If the folder is a git repository with no remote, the line reads
+`remote: none`, and **none** is a button. Pressing it adds this to the prompt
+box, after anything you have already typed:
 
 > Help me connect this project to a remote GitHub repository.
 
-It is appended to whatever you have already typed, so a draft is never lost,
-and nothing is sent until you review it and press Enter.
+It does not send anything. You read it, edit it if you like, and press Enter.
 
-## When it stays out of the way
+## What it shows and when
 
-- If the folder is not a git repository, no line is shown.
-- While Claude is showing a survey above the prompt box, the line steps aside.
+| Situation | What you see |
+| --- | --- |
+| Git repo with a remote | `local: <folder> · remote: <owner/name> · <branch>` |
+| Git repo with no remote | `local: <folder> · remote: none · <branch>` (`none` is a button) |
+| Detached HEAD | the branch shows as `detached` |
+| Not in a git repository | no line |
+| A survey is showing | no line, so it never covers a survey |
 
-## Privacy
-
-It is an interface tweak only. It reads the git remote and branch of the
-current folder to draw the line, and it makes no network requests and does not
-send anything anywhere.
+The remote is shortened to `owner/name` from either an SSH or an HTTPS URL.
 
 ## Install
+
+Add the marketplace once, then install the mod.
 
 At the prompt of a terminal session:
 
 ```
+/plugin marketplace add svilotti-od/oily-dodo-claude-mods
 /plugin install repo-branch-band --marketplace svilotti-od/oily-dodo-claude-mods
 ```
 
@@ -49,19 +51,29 @@ claude plugin install repo-branch-band --marketplace svilotti-od/oily-dodo-claud
 ```
 
 In the desktop app: click **+** next to the prompt box, then **Plugins**,
-**Add marketplace** with `svilotti-od/oily-dodo-claude-mods`, then **Add plugin**.
+**Add marketplace** with `svilotti-od/oily-dodo-claude-mods`, then
+**Add plugin**.
 
 Start a new session afterwards to see the line.
 
-## Customizing
+## What it touches
+
+It asks the engine which working copy the session is in, and reads the
+folder name, remote URL and branch from the answer. It makes no network
+requests, runs no commands of its own, writes no files and sends no prompts.
+
+## Tuning
 
 Everything lives in `hooks/register.tsx`:
 
-- **Wording and style:** the `<Text>` elements near the bottom (`italic`,
-  `dimColor` and `size="footnote"`).
-- **Remote shortening:** the `shortRemote` function at the top.
-- **The "none" request:** the `text` passed to `$.prompt.fill`.
+- The wording is the template strings that start with `local:`.
+- The text size is `size="footnote"`. The steps are `caption`, `footnote`,
+  `body`, `heading` and `title`.
+- The request the button adds is the `text` passed to `$.prompt.fill`.
+
+The app draws its own frame around any row in the band, and a mod cannot
+remove it.
 
 ## License
 
-[MIT](LICENSE)
+MIT. See [LICENSE](LICENSE).

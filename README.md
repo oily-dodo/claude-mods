@@ -1,4 +1,4 @@
-# oily-dodo-claude-mods
+# Claude Mods
 
 Small mods for [Claude Code](https://claude.com/claude-code) by Oily Dodo.
 
@@ -23,23 +23,23 @@ You add this repo as a marketplace once, then install whichever mods you want.
 **In the desktop app**
 
 1. Click **+** next to the prompt box, then **Plugins**.
-2. Choose **Add marketplace** and enter `svilotti-od/oily-dodo-claude-mods`.
+2. Choose **Add marketplace** and enter `oily-dodo/claude-mods`.
 3. Choose **Add plugin** and pick a mod.
 4. Start a new session to see it.
 
 **At the prompt of a terminal session**
 
 ```
-/plugin marketplace add svilotti-od/oily-dodo-claude-mods
-/plugin install fall-leaves --marketplace svilotti-od/oily-dodo-claude-mods
-/plugin install repo-branch-band --marketplace svilotti-od/oily-dodo-claude-mods
+/plugin marketplace add oily-dodo/claude-mods
+/plugin install fall-leaves --marketplace oily-dodo/claude-mods
+/plugin install repo-branch-band --marketplace oily-dodo/claude-mods
 ```
 
 **From a shell**
 
 ```bash
-claude plugin install fall-leaves --marketplace svilotti-od/oily-dodo-claude-mods
-claude plugin install repo-branch-band --marketplace svilotti-od/oily-dodo-claude-mods
+claude plugin install fall-leaves --marketplace oily-dodo/claude-mods
+claude plugin install repo-branch-band --marketplace oily-dodo/claude-mods
 ```
 
 An installed mod stays on for every new session until you turn it off. Type

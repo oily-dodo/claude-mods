@@ -1,8 +1,8 @@
 {
-  "name": "oily-dodo-claude-mods",
+  "name": "claude-mods",
   "description": "Claude Code mods by Oily Dodo: themes, bands and small interface tweaks",
   "owner": {
-    "name": "svilotti-od"
+    "name": "Oily Dodo Enterprises LLC"
   },
   "plugins": [
     {

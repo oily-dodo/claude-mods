@@ -4,7 +4,7 @@ A Claude Code mod that shows where a session is working: the local folder,
 the remote repository and the branch, in a quiet line above the prompt box.
 
 ```
-local: mods-development · remote: svilotti-od/oily-dodo-claude-mods · main
+local: mods-development · remote: oily-dodo/claude-mods · main
 ```
 
 The line is small italic text in a muted color, so it reads as information and
@@ -40,18 +40,18 @@ Add the marketplace once, then install the mod.
 At the prompt of a terminal session:
 
 ```
-/plugin marketplace add svilotti-od/oily-dodo-claude-mods
-/plugin install repo-branch-band --marketplace svilotti-od/oily-dodo-claude-mods
+/plugin marketplace add oily-dodo/claude-mods
+/plugin install repo-branch-band --marketplace oily-dodo/claude-mods
 ```
 
 From a shell:
 
 ```bash
-claude plugin install repo-branch-band --marketplace svilotti-od/oily-dodo-claude-mods
+claude plugin install repo-branch-band --marketplace oily-dodo/claude-mods
 ```
 
 In the desktop app: click **+** next to the prompt box, then **Plugins**,
-**Add marketplace** with `svilotti-od/oily-dodo-claude-mods`, then
+**Add marketplace** with `oily-dodo/claude-mods`, then
 **Add plugin**.
 
 Start a new session afterwards to see the line.
